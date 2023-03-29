@@ -15,12 +15,19 @@ for (let i = 1; i <= 100; i++){
 
   container.append(box);
   box.append(i);
+  
+  box.addEventListener("click", function(){
+    box.classList.add("color-change")
+    console.log(`Hai cliccato il box n.${i}`)
+  })
 }
 
 const playButton = document.querySelector("#start");
 const display = document.querySelector("#main");
-console.log(display)
 
 playButton.addEventListener("click", function(){
   display.classList.remove("hide");
 })
+
+
+
